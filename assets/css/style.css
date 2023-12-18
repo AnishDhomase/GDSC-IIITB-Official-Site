@@ -650,7 +650,9 @@ section {
 #event {
   background: #fef8f5;
 }
-
+#event .img-fluid{
+  max-width: 350px;
+}
 .event h3 {
   font-weight: 700;
   font-size: 34px;
