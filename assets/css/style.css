@@ -1084,102 +1084,119 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team {
-  background: #fff;
-  padding: 60px 0;
+*{
+  padding: 0;
+  margin: 0;
 }
-
-.team .member {
-  text-align: center;
-  margin-bottom: 20px;
-  background: #ffffff;
-  position: relative;
-  overflow: hidden;
+:root {
+  --blue: #4867d6;
+  --gddark:#4e4039;
+  --gdlight:#ffdcca;
 }
-
-.team .member img {
-  height: 300px;
-  width: 320px;
+.team-sec{
+  font-family: sans-serif;
+  background-color: rgb(254, 248, 245);
 }
-
-.team .member .member-info {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 0.2s;
+.team-top{
+  height: 800px;
+  background-color: var(--gdlight);
+  justify-content: center;
 }
-
-.team .member .member-info-content {
-  position: absolute;
-  left: 50px;
-  right: 0;
-  bottom: 0;
-  transition: bottom 0.4s;
+.team-main{
+  margin: -590px auto 60px;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  background-color: white;
 }
-
-.team .member .member-info-content h4 {
+.team-mem{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.team-head{
+  display: flex;
+  padding-top: 80px;
+  justify-content: center;
+  color: var(--gddark);
+}
+.team-head h1{
   font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 26px;
-  color: #fff;
+  font-size: 48px;
+  justify-content: center;
 }
-
-.team .member .member-info-content span {
-  font-style: italic;
-  display: block;
-  font-size: 20px;
-  color: #fff;
+.card{
+  border:none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 33%;
+  min-width: 343px;
+  padding: 30px;
+  border: none;
 }
-
-.team .member .social {
-  position: absolute;
-  left: -50px;
-  top: 0;
-  bottom: 0;
-  width: 50px;
-  transition: left ease-in-out 0.3s;
-  background: rgba(78, 64, 57, 0.6);
+.team-image img{
+  width:100%;
+  height: 360px;
+ object-fit:cover;
+ object-position:50% 50%;
+}
+.team-desc{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 7px;
+  width: 80%;
+  height: 160px;
+  margin: -57px auto 0;
+  background-color: white;
+}
+.mem-name h5{
   text-align: center;
+  color: var(--blue);
+  font-size: 24px;
+  font-weight: 700;
 }
-
-.team .member .social a {
-  transition: color 0.3s;
-  display: block;
-  color: #fff;
-  margin-top: 15px;
-}
-
-.team .member .social a:hover {
-  color: #1a73e8;
-}
-
-.team .member .social i {
+.mem-pos h6{
+  text-align: center;
   font-size: 18px;
-  margin: 0 2px;
+  font-weight: 500;
+  letter-spacing: 1;
+}
+.team-icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+ height: 15px;
+ font-size: 17px !important;
+ color: black !important;
+}
+.team-icon a i{
+  color: black;
 }
 
-.team .member:hover .member-info {
-  background: linear-gradient(
-    0deg,
-    rgba(78, 64, 57, 0.95) 0%,
-    rgba(78, 64, 57, 0.95) 15%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  opacity: 1;
-  transition: 0.4s;
+@media screen and (max-width: 1280px) {
+  .card{
+    max-width: 46%;
+  }
 }
-
-.team .member:hover .member-info-content {
-  bottom: 30px;
-  transition: bottom 0.4s;
+@media screen and (max-width: 855px) {
+  .card{
+    max-width: 80%;
+  }
+  
 }
-
-.team .member:hover .social {
-  left: 0;
-  transition: left ease-in-out 0.3s;
+@media screen and (max-width: 855px) {
+  .team-image img{
+      height: 320px;
+  }
+  .team-desc{
+      height: 142px;
+  }
 }
 
 /*--------------------------------------------------------------
